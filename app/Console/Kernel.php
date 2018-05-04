@@ -23,6 +23,7 @@ class Kernel extends ConsoleKernel
         \App\Console\Components\Twitter\ListenForMentions::class,
         \App\Console\Components\Twitter\ListenForQuotes::class,
         \App\Console\Components\Twitter\SendFakeTweet::class,
+        \App\Console\Components\Uptime\FetchUrlStatus::class,
         UpdateDashboard::class,
     ];
 
@@ -31,6 +32,7 @@ class Kernel extends ConsoleKernel
         // $schedule->command('dashboard:fetch-calendar-events')->everyMinute();
         // $schedule->command('dashboard:fetch-current-track')->everyMinute();
         $schedule->command('dashboard:send-heartbeat')->everyMinute();
+        $schedule->command('dashboard:fetch-uptimes')->everyFiveMinutes();
         $schedule->command('dashboard:fetch-tasks')->everyFiveMinutes();
         // $schedule->command('dashboard:fetch-github-totals')->everyThirtyMinutes();
         // $schedule->command('dashboard:fetch-packagist-totals')->hourly();

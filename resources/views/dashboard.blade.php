@@ -6,7 +6,7 @@
 
 <dashboard id="dashboard" columns="5" rows="3">
     <twitter :initial-tweets="{{ json_encode($initialTweets) }}" position="a1:a3"></twitter>
-    <uptime position="b1"></uptime>
+    <uptime position="e2:e3"></uptime>
     <tasks team-member="cindy" position="b3"></tasks>
     <tasks team-member="gabe" position="c1"></tasks>
     <tasks team-member="wun" position="c2"></tasks>
